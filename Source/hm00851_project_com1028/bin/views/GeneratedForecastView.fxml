@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchorPane" prefHeight="200.0" prefWidth="500.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="forecastView" editable="false" layoutX="-1.0" prefHeight="125.0" prefWidth="500.0">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font></TextArea>
+      <Button fx:id="storeForecast" layoutX="87.0" layoutY="144.0" mnemonicParsing="false" onAction="#onStore" text="Store">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="351.0" layoutY="144.0" mnemonicParsing="false" onAction="#onDone" text="Done">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

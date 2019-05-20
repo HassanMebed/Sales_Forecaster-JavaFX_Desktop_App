@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="borderPane" prefHeight="400.0" prefWidth="500.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SelectProductController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="title" alignment="CENTER" layoutY="29.0" prefHeight="72.0" prefWidth="500.0" text="Select Product/Service">
+               <font>
+                  <Font name="HelvLight Regular" size="46.0" />
+               </font>
+            </Label>
+            <Button fx:id="submit" layoutX="203.0" layoutY="184.0" mnemonicParsing="false" onAction="#onSelect" text="Continue">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="28.0" layoutY="300.0" mnemonicParsing="false" onAction="#onAddProduct" text="Add a Product/Service">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="251.0" layoutY="300.0" mnemonicParsing="false" onAction="#onRemoveProduct" text="Remove a Product/Service">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="selection" layoutX="150.0" layoutY="126.0" onAction="#onItemSelected" prefHeight="31.0" prefWidth="201.0" promptText="- Please Select -" />
+            <Label id="welcome" fx:id="welcome" alignment="CENTER" prefHeight="30.0" prefWidth="500.0" text="Welcome, ">
+               <font>
+                  <Font name="HelvLight Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="System">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onGuide" text="Guide" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

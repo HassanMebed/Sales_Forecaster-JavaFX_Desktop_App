@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchorPane" prefHeight="470.0" prefWidth="710.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditForecastsController">
+   <children>
+      <ScrollPane hbarPolicy="ALWAYS" layoutX="25.0" layoutY="39.0" prefHeight="350.0" prefWidth="595.0">
+         <content>
+            <TableView fx:id="forecastsTable" editable="true" prefHeight="350.0" prefWidth="630.0">
+              <columns>
+                <TableColumn fx:id="year" editable="false" prefWidth="75.0" text="Year" />
+                <TableColumn fx:id="q1" onEditCommit="#onEditQ1" prefWidth="100.0" sortable="false" text="Q1" />
+                  <TableColumn fx:id="q2" onEditCommit="#onEditQ2" prefWidth="100.0" sortable="false" text="Q2" />
+                  <TableColumn fx:id="q3" onEditCommit="#onEditQ3" prefWidth="100.0" sortable="false" text="Q3" />
+                  <TableColumn fx:id="q4" onEditCommit="#onEditQ4" prefWidth="100.0" sortable="false" text="Q4" />
+                  <TableColumn fx:id="dateStored" editable="false" prefWidth="165.0" text="Date Stored" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button fx:id="remove" layoutX="627.0" layoutY="201.0" mnemonicParsing="false" onAction="#onRemove" text="Remove">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Button>
+      <TextFlow layoutX="25.0" prefHeight="39.0" prefWidth="595.0" textAlignment="CENTER">
+         <children>
+            <Label id="title" fx:id="tableTitle" text="Saved Forecasts" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </TextFlow>
+      <Button layoutX="295.0" layoutY="413.0" mnemonicParsing="false" onAction="#onDone" text="Done">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

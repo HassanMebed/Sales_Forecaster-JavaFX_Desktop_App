@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchorPane" prefHeight="500.0" prefWidth="610.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageSalesController">
+   <children>
+      <TextField fx:id="yearInput" layoutX="25.0" layoutY="410.0" onKeyPressed="#onEnterClicked" prefHeight="31.0" prefWidth="75.0" promptText="Year">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="q1Input" layoutX="100.0" layoutY="410.0" onKeyPressed="#onEnterClicked" prefHeight="31.0" prefWidth="100.0" promptText="Q1 Sales">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="q2Input" layoutX="200.0" layoutY="410.0" onKeyPressed="#onEnterClicked" prefHeight="31.0" prefWidth="100.0" promptText="Q2 Sales">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="q3Input" layoutX="300.0" layoutY="410.0" onKeyPressed="#onEnterClicked" prefHeight="31.0" prefWidth="100.0" promptText="Q3 Sales">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="q4Input" layoutX="400.0" layoutY="410.0" onKeyPressed="#onEnterClicked" prefHeight="31.0" prefWidth="100.0" promptText="Q4 Sales">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </TextField>
+      <ScrollPane hbarPolicy="NEVER" layoutX="25.0" layoutY="39.0" prefHeight="350.0" prefWidth="495.0">
+         <content>
+            <TableView fx:id="salesTable" editable="true" prefHeight="350.0" prefWidth="477.0">
+              <columns>
+                <TableColumn fx:id="year" onEditCommit="#onEditYear" prefWidth="75.0" text="Year" />
+                <TableColumn fx:id="q1" onEditCommit="#onEditQ1" prefWidth="100.0" sortable="false" text="Q1" />
+                  <TableColumn fx:id="q2" onEditCommit="#onEditQ2" prefWidth="100.0" sortable="false" text="Q2" />
+                  <TableColumn fx:id="q3" onEditCommit="#onEditQ3" prefWidth="100.0" sortable="false" text="Q3" />
+                  <TableColumn fx:id="q4" onEditCommit="#onEditQ4" prefWidth="100.0" sortable="false" text="Q4" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Button layoutX="226.0" layoutY="455.0" mnemonicParsing="false" onAction="#onAdd" text="Add">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Button>
+      <Button fx:id="remove" layoutX="523.0" layoutY="201.0" mnemonicParsing="false" onAction="#onRemove" text="Remove">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Button>
+      <Button layoutX="533.0" layoutY="455.0" mnemonicParsing="false" onAction="#onDone" text="Done">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font></Button>
+      <TextFlow layoutX="25.0" prefHeight="39.0" prefWidth="477.0" textAlignment="CENTER">
+         <children>
+            <Label id="title" fx:id="tableTitle" text="Sales History" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>

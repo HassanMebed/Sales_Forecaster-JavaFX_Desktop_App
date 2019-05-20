@@ -1,0 +1,43 @@
+#borderPane
+{
+	-fx-background-color : #FFFAF0;
+	-fx-background-image: url('file:resources/background.jpg');
+}
+
+#borderPaneBigger
+{
+	-fx-background-color : #FFFAF0;
+	-fx-background-image: url('file:resources/backgroundBigger.jpg');
+}
+
+#anchorPane
+{
+	-fx-background-color : #FFFAF0;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler 
+{
+    -fx-background-color:  #3A5FCD;
+    -fx-border-color: #FFFAF0;
+}
+
+.table-view .column-header .label
+{
+   -fx-text-fill: #FFFAF0;
+   -fx-font-weight: bold; 
+}
+
+#title
+{
+	-fx-border-radius: 0 0 10 10;
+	-fx-background-radius: 0 0 10 10;
+	-fx-background-color : #3A5FCD;
+	-fx-text-fill: #F6F6F6;
+}
+
+#welcome
+{
+	-fx-background-color : #3A5FCD;
+	-fx-text-fill: #F6F6F6;
+}

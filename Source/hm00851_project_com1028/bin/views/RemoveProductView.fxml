@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="250.0" prefWidth="500.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RemoveProductController">
+   <center>
+      <AnchorPane id="anchorPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="selection" layoutX="150.0" layoutY="64.0" onAction="#onItemSelected" prefHeight="31.0" prefWidth="201.0" promptText="- Please Select -" />
+            <Button fx:id="remove" layoutX="212.0" layoutY="125.0" mnemonicParsing="false" onAction="#onRemove" text="Remove">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="222.0" layoutY="200.0" mnemonicParsing="false" onAction="#onDone" text="Done">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+          	</Button>
+            <Label fx:id="title" layoutX="65.0" text="Select Product/Service to Remove:">
+               <font>
+                  <Font name="HelvLight Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

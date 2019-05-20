@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="borderPaneBigger" prefHeight="585.0" prefWidth="950.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WorkTabsController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Sales">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="14.0" layoutY="95.0" prefHeight="335.0" prefWidth="415.0">
+                           <content>
+                              <TableView fx:id="salesTable" prefHeight="335.0" prefWidth="396.0">
+                                <columns>
+                                  <TableColumn fx:id="year" editable="false" prefWidth="75.0" text="Year" />
+                                  <TableColumn fx:id="q1" editable="false" prefWidth="82.0" sortable="false" text="Q1" />
+                                    <TableColumn fx:id="q2" editable="false" prefWidth="82.0" sortable="false" text="Q2" />
+                                    <TableColumn fx:id="q3" editable="false" prefWidth="82.0" sortable="false" text="Q3" />
+                                    <TableColumn fx:id="q4" editable="false" prefWidth="82.0" sortable="false" text="Q4" />
+                                </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                        <Button layoutX="174.0" layoutY="438.0" mnemonicParsing="false" onAction="#onManageSales" text="Manage">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font></Button>
+                        <Separator layoutX="441.0" layoutY="66.0" orientation="VERTICAL" prefHeight="400.0" />
+                        <ScrollPane layoutX="459.0" layoutY="95.0" prefHeight="335.0" prefWidth="465.0">
+                           <content>
+                              <AreaChart fx:id="salesChart" prefHeight="320.0" prefWidth="850.0" title="Quarterly Sales">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </AreaChart>
+                           </content>
+                        </ScrollPane>
+                        <Label id="title" fx:id="tab1Title" alignment="CENTER" prefHeight="44.0" prefWidth="950.0" text="Label">
+                           <font>
+                              <Font name="HelvLight Regular" size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Forecasts">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="21.0" layoutY="108.0" prefHeight="300.0" prefWidth="595.0">
+                           <content>
+                              <TableView fx:id="forecastsTable" prefHeight="300.0" prefWidth="576.0">
+                                 <columns>
+                                    <TableColumn fx:id="yearForecast" editable="false" prefWidth="75.0" text="Year" />
+                                    <TableColumn fx:id="q1Forecast" editable="false" prefWidth="100.0" sortable="false" text="Q1" />
+                                    <TableColumn fx:id="q2Forecast" editable="false" prefWidth="100.0" sortable="false" text="Q2" />
+                                    <TableColumn fx:id="q3Forecast" editable="false" prefWidth="100.0" sortable="false" text="Q3" />
+                                    <TableColumn fx:id="q4Forecast" editable="false" prefWidth="100.0" sortable="false" text="Q4" />
+                                    <TableColumn fx:id="dateStored" editable="false" prefWidth="165.0" text="Date Stored" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="editForecasts" layoutX="292.0" layoutY="423.0" mnemonicParsing="false" onAction="#onEditForecasts" text="Edit">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="637.0" layoutY="54.0" orientation="VERTICAL" prefHeight="400.0" />
+                        <Label layoutX="658.0" layoutY="73.0" text="To Generate a Forecast, &#10;Please Select Desired Parameters: ">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="currentYear" layoutX="655.0" layoutY="132.0" mnemonicParsing="false" text="Current Year's Unknown Sales">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="nextYear" layoutX="655.0" layoutY="178.0" mnemonicParsing="false" text="Next Year's Sales">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <Button layoutX="691.0" layoutY="241.0" mnemonicParsing="false" onAction="#onGenerateForecast" text="Generate Forecast">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label id="title" fx:id="tab2Title" alignment="CENTER" prefHeight="44.0" prefWidth="950.0" text="Label">
+                           <font>
+                              <Font name="HelvLight Regular" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="82.0" text="Stored Forecasts">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Comparison">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutX="3.0" layoutY="104.0" prefHeight="0.0" prefWidth="946.0" />
+                        <Button fx:id="generateChart" layoutX="325.0" layoutY="60.0" mnemonicParsing="false" onAction="#onGenerateComparisonChart" text="Generate a New Comparison Chart">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextFlow layoutX="30.0" layoutY="447.0" prefHeight="23.0" prefWidth="843.0" textAlignment="CENTER">
+                           <children>
+                              <Label fx:id="mape" text="Label">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </TextFlow>
+                        <ScrollPane fx:id="chartContainer" layoutX="30.0" layoutY="122.0" prefHeight="318.0" prefWidth="895.0">
+                           <content>
+                              <LineChart fx:id="comparisonChart" prefHeight="318.0" prefWidth="890.0" title="Actual Sales vs. Forecasted Sales">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                           </content>
+                        </ScrollPane>
+                        <Label id="title" alignment="CENTER" prefHeight="44.0" prefWidth="950.0" text="Sales vs. Forecasts Visual Comparison">
+                           <font>
+                              <Font name="HelvLight Regular" size="36.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#onBack" text="Back To Selection" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font></Button>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="System">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#onExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onGuide" text="Guide" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

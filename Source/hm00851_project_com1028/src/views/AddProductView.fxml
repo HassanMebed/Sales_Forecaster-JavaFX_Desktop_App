@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="250.0" prefWidth="500.0" stylesheets="@mainLayout.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddProductController">
+   <center>
+      <AnchorPane id="anchorPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="210.0" layoutY="151.0" mnemonicParsing="false" onAction="#onContinue" text="Continue">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="218.0" layoutY="209.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+          	</Button>
+            <Label id="title" layoutX="95.0" prefHeight="46.0" prefWidth="313.0" text="Enter Product/Service Name:">
+               <font>
+                  <Font name="HelvLight Regular" size="24.0" />
+               </font>
+            </Label>
+            <VBox fx:id="textInput" layoutX="137.0" layoutY="80.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="productName" onKeyPressed="#onEnterClicked">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
