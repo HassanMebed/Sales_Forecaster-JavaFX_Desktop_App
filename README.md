@@ -2,8 +2,8 @@
 ************************************************************************************************************************
 - JavaFX application developed using the Model-View-Controller architecture.
 - Details about the application can be found in the software requirements specification.
-- Uses the java open source Timeseries-Forecast library published by the Workday's Syman team for the actual forecasting
-  available here: https://github.com/Workday/timeseries-forecast
+- Uses the java open source Timeseries-Forecast library published by the Workday's Syman team for the actual forecasting.
+  Library available here: https://github.com/Workday/timeseries-forecast
 ************************************************************************************************************************
 
 // Database //
