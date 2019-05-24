@@ -16,7 +16,7 @@ contains the application's jar file for instant execution - make sure database i
 contains all of the application's source files that make it up i.e. the Eclipse project.
 
 // Class_Diagram.png //
-the application's class diagram
+the application's class diagram.
 
 // Software_Requirements_Specification.pdf //
 the application's software requirements specification document.
