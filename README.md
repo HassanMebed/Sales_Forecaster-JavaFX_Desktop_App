@@ -5,7 +5,9 @@
 - Uses the java open source Timeseries-Forecast library published by the Workday's Syman team for the actual forecasting.
   Library available here: https://github.com/Workday/timeseries-forecast
 ************************************************************************************************************************
-
+Pending feature update:
+- importing/exporting sales and forecast data
+************************************************************************************************************************
 // Database //
 contains the application's MySQL database script and the database's entity relationship diagram (has dynamic tables).
 
