@@ -6,7 +6,7 @@
   Library available here: https://github.com/Workday/timeseries-forecast
 ************************************************************************************************************************
 Pending feature update:
-- importing/exporting sales and forecast data
+- importing/exporting sales and forecast data.
 ************************************************************************************************************************
 // Database //
 contains the application's MySQL database script and the database's entity relationship diagram (has dynamic tables).
